@@ -4,15 +4,6 @@
 
 - Matthew Henderson [matthewh@netextremity.com](matthewh@netextremity.com) - Owner
 
-## Pre-Requisites
-
-- The [gcloud CLI](https://cloud.google.com/sdk/docs/install) installed and configured.
-- [Anaconda](https://www.anaconda.com/products/distribution) installed and configured.
-- You have a billable GCP project setup.
-- [Docker](https://www.docker.com/)
-- [VS Code](https://code.visualstudio.com/)
-- [VS Code Extension - Cloud Code](https://cloud.google.com/code) (For local development)
-
 ## Pre-requisites
 
 There are several ways to recreate this article but to follow along line for line you will need:
