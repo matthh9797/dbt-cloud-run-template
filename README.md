@@ -2,7 +2,7 @@
 
 ## Key Contacts
 
-- Matthew Henderson [matthew.henderson@jettytechnologies.com](matthew.henderson@jettytechnologies.com) - Owner
+- Matthew Henderson [matthew.henderson@jettytechnologies.com](matthewh@netextremity.com) - Owner
 
 ## Pre-Requisites
 
