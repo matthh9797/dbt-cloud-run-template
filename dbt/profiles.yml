@@ -1,24 +1,24 @@
-YOUR_DBT_PROJECT:
+dbt_cloud_run:
   target: dev
   outputs:
     local:
-      dataset: YOUR_DATASET
+      dataset: dev_mhenderson
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: EU
       method: service-account
       keyfile: tempkey.json
       priority: interactive
-      project: YOUR_PROJECT
+      project: jetty-platform-reporting-dev
       threads: 4
       type: bigquery
     dev:
-      dataset: YOUR_DATASET
+      dataset: dev_mhenderson
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: EU
       method: oauth
       priority: interactive
-      project: YOUR_PROJECT
+      project: jetty-platform-reporting-dev
       threads: 4
       type: bigquery
