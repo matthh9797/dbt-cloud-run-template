@@ -13,7 +13,6 @@
             "service": {
                 "name": "dbt-cloud-run-template",
                 "containerPort": 8080,
-                "serviceAccountName": "YOUR_SERVICE_ACCOUNT_EMAIL",
                 "resources": {
                     "limits": {
                         "memory": "256Mi"

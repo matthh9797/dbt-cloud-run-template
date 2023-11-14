@@ -168,5 +168,3 @@ cython_debug/
 **/env/
 **/test.env
 __pycache__
-
-tempkey.json
