@@ -29,23 +29,12 @@ pip install Flask
 
 ## Update your DBT Profile
 
-Update `dbt/profiles.yml` with YOUR_DATASET and YOUR_PROJECT. Test your local connection is working with `dbt debug --target local --project-dir dbt --profiles-dir dbt`.
+Update `dbt/profiles.yml` with YOUR_DATASET and YOUR_PROJECT.
 
 ```yml
 YOUR_DBT_PROJECT:
   target: dev
   outputs:
-    local:
-      dataset: YOUR_DATASET
-      job_execution_timeout_seconds: 300
-      job_retries: 1
-      location: EU
-      method: service-account
-      keyfile: tempkey.json
-      priority: interactive
-      project: YOUR_PROJECT
-      threads: 4
-      type: bigquery
     dev:
       dataset: YOUR_DATASET
       job_execution_timeout_seconds: 300
@@ -56,28 +45,16 @@ YOUR_DBT_PROJECT:
       project: YOUR_PROJECT
       threads: 4
       type: bigquery
-```
-
-## Create a Temporary Service Key for Local Development
-
-Add a service account key for developing locally.
-
-```cmd
-gcloud auth application-default login
-gcloud iam service-accounts keys create tempkey.json --iam-account=SVC_ACCT_EMAIL
-```
-
-Test DBT is working.
-
-```cmd
-dbt debug --target local --project-dir dbt --profiles-dir dbt
-dbt run --profiles-dir dbt --project-dir dbt --target local
-```
-
-Make sure to remove the service account key after you are finished developing locally.
-
-```cmd
-gcloud iam service-accounts keys delete SVC_ACCT_KEY_ID --iam-account=SVC_ACCT_EMAIL
+    prod:
+      dataset: YOUR_DATASET
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: EU
+      method: oauth
+      priority: interactive
+      project: YOUR_PROJECT
+      threads: 4
+      type: bigquery
 ```
 
 ## Deploy App to Cloud Run

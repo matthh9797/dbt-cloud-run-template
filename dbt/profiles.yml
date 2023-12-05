@@ -1,18 +1,17 @@
-YOUR_DBT_PROJECT:
+dbt_cloud_run:
   target: dev
   outputs:
-    local:
+    dev:
       dataset: YOUR_DATASET
       job_execution_timeout_seconds: 300
       job_retries: 1
       location: EU
-      method: service-account
-      keyfile: tempkey.json
+      method: oauth
       priority: interactive
       project: YOUR_PROJECT
       threads: 4
       type: bigquery
-    dev:
+    prod:
       dataset: YOUR_DATASET
       job_execution_timeout_seconds: 300
       job_retries: 1
